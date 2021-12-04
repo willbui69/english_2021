@@ -1,8 +1,8 @@
-# Webpack Express Example App
+# Initial Setup with Webpack
 
 The goal of this repo is used for inital setup for every project using webpack.
 
-It provides the base for developers, so they will not spend too much time to set up things that are in common in every project.
+It provides the base for developers, so they will not spend too much time for setting up things that are in common in every project.
 
 ## Get Up and Running
 
