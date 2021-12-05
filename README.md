@@ -24,11 +24,14 @@ The content of this course will be divided into weekly classes. Each week, we wi
  - Sugguest any advice and idea that we can improve the course's structure.
  - Offer other teaching metarials so that we can perfect each week lesson.
 
-Any contributions from you in this project will be acknowledged. Without your expertise, this project is not possible!
+Any contribution(s) from you in this project will be acknowledged. Without your expertise, this project is not possible!
 
 # For  Web developers
 
-It is important to make this project appealing in the front end and working seamlessly in the back end. Bear that in mind, we are going to 
+While the content is the heart of this project, the interface is regarded as the skeleton. It is important to make this project appealing in the front end and working seamlessly in the back end. Bear that in mind, we need your expertise to design a web app that is elegant as well as appealing.
+
+The innitial interface of the web app has been built. It works as the starting point so all of us can develop other features from there. This setup already have webpack and other npm packages, loaders and plugins installed.  
+Currently, we will focus on the front end first, but there will be more work to be done for the lesson, exercise, and grade systems. 
 
 ## Get Up and Running
 
