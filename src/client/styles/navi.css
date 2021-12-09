@@ -3,6 +3,7 @@
     grid-area: sidebar;
     border: 1px solid orange;
     background-color: rgb(7, 1, 1);
+    overflow: scroll;
 }
 
 .main-container {
