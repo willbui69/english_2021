@@ -1,14 +1,27 @@
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
 }
 
-main {
-    flex: 2;
+.body-container {
+    display: grid;
+    grid-template-columns: 25% auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "sidebar main";
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color: whitesmoke;
 }
 
-section {
-    max-width: 800px;
-    margin: 50px auto;
+.body-container a {
+    text-decoration: none;
+    color: white;
+}
+
+.body-container a:hover {
+    text-decoration: underline;
 }
