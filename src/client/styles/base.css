@@ -12,14 +12,6 @@ body {
     grid-template-rows: auto;
     grid-template-areas: 
     "sidebar main";
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 16px;
-    color: whitesmoke;
-}
-
-.body-container a {
-    text-decoration: none;
-    color: white;
 }
 
 .body-container a:hover {

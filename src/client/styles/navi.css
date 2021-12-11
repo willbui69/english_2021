@@ -1,14 +1,19 @@
 
 .aside-container {
     grid-area: sidebar;
-    border: 1px solid orange;
     background-color: rgb(7, 1, 1);
     overflow: scroll;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+
+.aside-container a {
+    text-decoration: none;
+    color: white;
 }
 
 .main-container {
     grid-area: main;
-    border: 1px solid blue;
 }
 
 .week {
