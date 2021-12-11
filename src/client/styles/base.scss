@@ -1,0 +1,19 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.body-container {
+    display: grid;
+    grid-template-columns: 25% auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "sidebar main";
+}
+
+.body-container a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,36 @@
+
+.aside-container {
+    grid-area: sidebar;
+    background-color: rgb(7, 1, 1);
+    overflow: scroll;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+
+.aside-container a {
+    text-decoration: none;
+    color: white;
+}
+.aside-container header {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.main-container {
+    grid-area: main;
+    overflow: scroll;
+}
+
+.week {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.418);
+}
+
+nav ul {
+    list-style-type: none;
+    margin-left: 5%;
+    padding: 0;
+}
