@@ -3,7 +3,13 @@ const webpack = require("webpack")
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-    entry: './src/client/index.js',
+    entry: {
+        index: './src/client/index.js'
+    },
+        output: {
+        libraryTarget: 'var',
+        library: 'Client'
+    },
     mode: 'development',
     devtool: 'source-map',
     module: {
