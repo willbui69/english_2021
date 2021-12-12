@@ -16,6 +16,14 @@ module.exports = {
                 {
                     test: /\.scss$/,
                     use: [ 'style-loader', 'css-loader', 'sass-loader' ]
+                },
+                {
+                    test: /\.(png|ttf)$/,
+                    loader: "file-loader",
+                    options: {
+                        outputPath: 'images',
+                        name: '[name].[ext]'
+                    },
                 }
         ]
 },
@@ -23,6 +31,10 @@ plugins: [
     new HtmlWebPackPlugin({
         template: "./src/client/views/index.html",
         filename: "./index.html",
+    }),
+    new HtmlWebPackPlugin({
+        template: "./src/client/views/week_0.html",
+        filename: "./week_0.html"
     })
 ]
 }
