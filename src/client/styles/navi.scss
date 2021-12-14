@@ -24,10 +24,14 @@
     overflow: scroll;
 }
 
-.week {
+nav .week {
     font-size: 16px;
     color: rgba(255, 255, 255, 0.418);
 }
+
+.week a:hover {
+     color: #B91646;
+ }
 
 nav ul {
     list-style-type: none;
