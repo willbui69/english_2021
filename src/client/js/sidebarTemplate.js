@@ -45,49 +45,49 @@ function addSidebarTemplate(){
                     </li>
                 <li>
                     <span class="week">
-                        <a href="#">Week 1</a>
+                        <a href="week_1.html">Week 1</a>
                         Word Classification
                     </span>
                 </li>
                 <li>
                     <span class="week">
-                        <a href="#">Week 2</a>
+                        <a href="week_3.html">Week 2</a>
                         Sentence Structure
                     </span>
                 </li>
                 <li>
                     <span class="week">
-                        <a href="#">Week 3</a>
+                        <a href="week_3.html">Week 3</a>
                         Tenses
                     </span>
                 </li>
                 <li>
                     <span class="week">
-                        <a href="#">Week 4</a>
+                        <a href="week_4.html">Week 4</a>
                         Pronunciation
                     </span>
                 </li>
                 <li>
                     <span class="week">
-                        <a href="#">Week 5</a>
+                        <a href="week_5.html">Week 5</a>
                         Expression
                     </span>
                 </li>
                 <li>
                     <span class="week">
-                        <a href="#">Week 6</a>
+                        <a href="week_6.html">Week 6</a>
                         English In Daily Conversation
                     </span>
                 </li>
                 <li>
                     <span class="week">
-                        <a href="#">Week 7</a>
+                        <a href="week_8.html">Week 7</a>
                         English in Work
                     </span>
                 </li>
                 <li>
                     <span class="week">
-                        <a href="#">Week 8</a>
+                        <a href="week_8.html">Week 8</a>
                         English in Academia
                     </span>
                 </li>
