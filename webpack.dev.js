@@ -45,6 +45,10 @@ plugins: [
     new HtmlWebPackPlugin({
         template: "./src/client/views/week_3.html",
         filename: "./week_3.html"
+    }),
+    new HtmlWebPackPlugin({
+        template: "./src/client/views/week_0_notes.html",
+        filename: "./week_0_notes.html"
     })
 ]
 }

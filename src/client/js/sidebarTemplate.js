@@ -4,7 +4,7 @@ function addSidebarTemplate(){
     <aside class="aside-container">
         <header class="header">
             <h1>
-                <a href=".">English - Start Here</a>
+                <a href="week_0_notes.html">English - Start Here</a>
             </h1>
             <p>
                 <a class="mentorship-program" href="#">Mentorship Program</a>
@@ -51,7 +51,7 @@ function addSidebarTemplate(){
                 </li>
                 <li>
                     <span class="week">
-                        <a href="week_3.html">Week 2</a>
+                        <a href="week_2.html">Week 2</a>
                         Sentence Structure
                     </span>
                 </li>
