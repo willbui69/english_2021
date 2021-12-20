@@ -1,5 +1,5 @@
 .week-notes {
-    margin: 15px 10px 25px 25px;
+    margin: 15px 20px 25px 25px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 16px;
     line-height: 1.6;
@@ -22,9 +22,27 @@
     background: #D5D5D5;
 }
 
+//Style top up button at the end of each week note
 #btn-back-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
     display: none;
 }
+
+#topUpButton {
+    display:block;
+    width: 60px;
+    margin-left: 90%;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #F0134D;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+ #topUpButton:hover {
+     background-color: #555;
+ }
