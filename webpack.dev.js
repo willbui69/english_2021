@@ -4,7 +4,8 @@ const HtmlWebPackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     entry: {
-        index: './src/client/index.js'
+        index: './src/client/index.js',
+        topup: './src/client/topup.js'
     },
         output: {
         libraryTarget: 'var',
@@ -27,28 +28,35 @@ module.exports = {
                     test: /\.(png|ttf)$/,
                     loader: "file-loader",
                     options: {
-                        outputPath: 'images',
-                        name: '[name].[ext]'
+                        name: '/media/[name].[ext]'
                     },
-                }
+                  },
         ]
 },
 plugins: [
     new HtmlWebPackPlugin({
         template: "./src/client/views/index.html",
         filename: "./index.html",
+        inject: true,
+        chunks: ['index']
     }),
     new HtmlWebPackPlugin({
         template: "./src/client/views/week_0.html",
-        filename: "./week_0.html"
+        filename: "./week_0.html",
+        inject: true,
+        chunks: ['index']
     }),
     new HtmlWebPackPlugin({
         template: "./src/client/views/week_3.html",
-        filename: "./week_3.html"
+        filename: "./week_3.html",
+        inject: true,
+        chunks: ['index']
     }),
     new HtmlWebPackPlugin({
         template: "./src/client/views/week_0_notes.html",
-        filename: "./week_0_notes.html"
+        filename: "./week_0_notes.html",
+        inject: true,
+        chunks: ['index','topup']
     })
 ]
 }
