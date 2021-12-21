@@ -57,6 +57,12 @@ plugins: [
         filename: "./week_0_notes.html",
         inject: true,
         chunks: ['index','topup']
+    }),
+        new HtmlWebPackPlugin({
+        template: "./src/client/views/week_0_notes.html",
+        filename: "./week_0_notes.html",
+        inject: true,
+        chunks: ['index','topup']
     })
 ]
 }
