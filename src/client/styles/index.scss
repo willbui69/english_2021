@@ -1,0 +1,188 @@
+/*Style for the whole login page*/
+html {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.body-container {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 10% 90%;
+    grid-template-areas: 
+    ". header"
+    ". main";
+    border: 1px solid red;
+}
+
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-template-areas: 
+    "brand navibar";
+    border: 1px solid green;
+}
+
+.brand-name {
+    grid-area: brand;
+    border: 1px solid blue;
+}
+
+.navibar {
+    grid-area: navibar;
+    border: 1px solid yellow;
+    display: flex;
+    justify-content: space-evenly;    
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-auto-rows: auto;
+    grid-template-areas:
+    "welcome bgr-image" 
+    "form bgr-image"
+    "signup bgr-image"
+    "lesson weeks"
+    "mentor profiles";
+    border: 1px solid black;
+}
+
+.welcome {
+    grid-area: welcome;
+    border: 1px solid aqua;
+}
+
+/*Style the log in form*/
+form {
+    grid-area: form;
+    border: 1px solid navajowhite;
+    text-align: center;
+}
+
+input[type=text], input[type=password] {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  /*Style sign in button*/
+button {
+    width: 80%;
+    height: 50px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: none;
+    background-color: #2E8BC0;
+    color: white;
+}
+
+button:hover {
+    background-color: #2867B2;
+}
+
+/*Style sign in with Goggle button*/
+#customBtn {
+    display: inline-block;
+    background: white;
+    color: #444;
+    width: 80%;
+    border-radius: 5px;
+    border: thin solid #888;
+    box-shadow: 1px 1px 1px grey;
+    white-space: nowrap;
+  }
+  #customBtn:hover {
+    cursor: pointer;
+  }
+
+  span.icon {
+    background: url('../media/google.png') transparent 5px 50% no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    width: 42px;
+    height: 42px;
+  }
+  span.buttonText {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 42px;
+    padding-right: 42px;
+    font-size: 14px;
+    font-weight: bold;
+    /* Use the Roboto font that is loaded in the <head> */
+    font-family: 'Roboto', sans-serif;
+  }
+
+.signup {
+    grid-area: signup;
+    text-align: center;
+}
+
+.background-image {
+    grid-area: bgr-image;
+    border: 1px solid orange;
+}
+.background-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+/*Style the lesson section*/
+.lesson-section {
+    grid-area: lesson;
+    border: 1px solid tan;
+}
+
+.week-section {
+    grid-area: weeks;
+    border: 1px solid salmon;
+}
+
+/*Style the mentorship program section*/
+.mentorship-program {
+    grid-area: mentor;
+    border: 1px solid salmon;
+}
+
+.mentor-profile {
+    grid-area: profiles;
+    border: 1px solid salmon;
+}
+
+/*Style the hr tag */
+.signup hr {
+    overflow: visible; /* For IE */
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+}
+
+.signup hr:after {
+    content: "or";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: white;
+}
