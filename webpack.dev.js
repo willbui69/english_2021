@@ -5,9 +5,10 @@ const HtmlWebPackPlugin = require('html-webpack-plugin')
 module.exports = {
     entry: {
         index: './src/client/index.js',
+        startpage: './src/client/startpage.js',
         topup: './src/client/topup.js'
     },
-        output: {
+    output: {
         libraryTarget: 'var',
         library: 'Client'
     },
@@ -44,25 +45,25 @@ plugins: [
         template: "./src/client/views/week_0.html",
         filename: "./week_0.html",
         inject: true,
-        chunks: ['index']
+        chunks:  ['startpage']
     }),
     new HtmlWebPackPlugin({
         template: "./src/client/views/week_3.html",
         filename: "./week_3.html",
         inject: true,
-        chunks: ['index']
+        chunks: ['startpage']
+    }),
+    new HtmlWebPackPlugin({
+        template: "./src/client/views/startpage.html",
+        filename: "./startpage.html",
+        inject: true,
+        chunks: ['startpage']
     }),
     new HtmlWebPackPlugin({
         template: "./src/client/views/week_0_notes.html",
         filename: "./week_0_notes.html",
         inject: true,
-        chunks: ['index','topup']
-    }),
-        new HtmlWebPackPlugin({
-        template: "./src/client/views/week_0_notes.html",
-        filename: "./week_0_notes.html",
-        inject: true,
-        chunks: ['index','topup']
+        chunks: ['startpage','topup']
     })
 ]
 }

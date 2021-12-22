@@ -1,4 +1,4 @@
-function addSidebarTemplate(){
+async function addSidebarTemplate(){
     const sidebar = document.createElement('template');
     sidebar.innerHTML = `
     <aside class="aside-container">
@@ -186,8 +186,13 @@ function addSidebarTemplate(){
             </li>
             </ul>
         </nav>
-    </aside>`
-    document.querySelector('#sidebar').appendChild(sidebar.content);
+    </aside>`;
+    try {
+        document.querySelector('#sidebar').appendChild(sidebar.content);
+    }catch(error){
+        console.log("error", error);
+    }
+    
 }
 
 export {
