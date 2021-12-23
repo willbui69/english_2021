@@ -26,11 +26,12 @@
         </div>
         <form>
             <div>
-                <input type="text" placeholder="Email or phone number" name="username" required>
-                <input type="password" placeholder="Password" name="password" required>
+                <input id="username" type="text" placeholder="Email or phone number" name="username" pattern="^([a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3})|(\d{3}-\d{3}-\d{4})$" title="Check your username again" required>
+                <input id="password" type="password" placeholder="Password" name="password" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                        title="Check your password again" required>
             </div>
             <div>
-                <button type="submit">Sign In</button>
+                <button id="loginBtn" type="submit">Sign In</button>
             </div>
             <div>
                 <a href="#">Forgot password?</a>
