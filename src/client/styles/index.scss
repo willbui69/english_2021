@@ -63,6 +63,16 @@ main {
     border: 1px solid aqua;
 }
 
+#password-reset a {
+    text-decoration: none;
+    color: gray;
+}
+
+#password-reset a:hover {
+    text-decoration: underline;
+    color: #2E8BC0;
+}
+
 /*Style the log in form*/
 form {
     grid-area: form;
@@ -111,7 +121,10 @@ button:hover {
   #customBtn:hover {
     cursor: pointer;
   }
-
+  span.label {
+    font-family: serif;
+    font-weight: normal;
+  }
   span.icon {
     background: url('../media/google.png') transparent 5px 50% no-repeat;
     display: inline-block;
