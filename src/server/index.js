@@ -3,7 +3,9 @@ const app = express()
 const fetch = require('node-fetch')
 const dotenv = require('dotenv')
 const mongo = require('mongodb')
+const cookieParser = require('cookie-parser')
 dotenv.config();
+
 /* Middleware*/
 const bodyParser = require('body-parser');
 
@@ -14,6 +16,7 @@ const projectData = {};
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 console.log(__dirname)
+app.use(cookieParser());
 
 // Cors for cross origin allowance
 const cors = require('cors');
@@ -48,6 +51,12 @@ app.post('/postuserlogindata', async(req, res)=>{
     }catch(error){
         console.log("error", error);
     }
+})
+
+//Get Log in route from google accounts
+app.post('/loginbygoogleaccount', (req, res)=>{
+    let token = req.body.token;
+    console.log(token);
 })
 
 //Validate user credientials

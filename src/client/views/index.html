@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <meta name="google-signin-client_id" content="177921256407-jfh7lklk7ttmj69a7l98817hvm6ipl92.apps.googleusercontent.com">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
     <title>English: Log In or Sign Up</title>
@@ -18,7 +19,9 @@
             <a href="#">Mentorship</a>
             <a href="#">Community</a>
             <a href="#">Join Now</a>
-            <a href="#">Sign In</a>
+            <div>
+                <button id="signOutBtn" type="button">Sign Out</button>
+            </div>
         </div>
     </header>
     <main>
@@ -40,35 +43,8 @@
         </form>
         <div class="signup">
             <hr>
-              <div id="gSignInWrapper">
-                <div id="customBtn" class="customGPlusSignIn">
-                  <span class="icon"></span>
-                  <span class="buttonText">Google</span>
-                </div>
-              </div>
-              <div id="name"></div>
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
         </div>
-        <script src="https://apis.google.com/js/platform.js?onload=onLoadGoogleCallback" async defer></script>
-        <script>
-            function onLoadGoogleCallback(){
-                gapi.load('auth2', function() {
-                    auth2 = gapi.auth2.init({
-                    client_id: '177921256407-jfh7lklk7ttmj69a7l98817hvm6ipl92.apps.googleusercontent.com',
-                    cookiepolicy: 'single_host_origin',
-                    scope: 'profile'
-                    });
-    
-                auth2.attachClickHandler(element, {},
-                    function(googleUser) {
-                        console.log('Signed in: ' + googleUser.getBasicProfile().getName());
-                    }, function(error) {
-                        console.log('Sign-in error', error);
-                    }
-                    );
-            });
-            element = document.getElementById('customBtn');
-            }
-        </script>
         <div class="background-image">
             <img src="../media/background.png">
         </div>
@@ -86,5 +62,18 @@
             mentors' profile here
         </div>
     </main>
+    <script>
+        function onSignIn(googleUser) {
+            var id_token = googleUser.getAuthResponse().id_token;
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/loginbygoogleaccount');
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.onload = function() {
+            console.log('Signed in as: ' + xhr.responseText);
+            };
+            xhr.send(JSON.stringify({token: id_token}));
+    }
+    </script>
 </body>
 </html>
