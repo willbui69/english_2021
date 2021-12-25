@@ -19,9 +19,7 @@
             <a href="#">Mentorship</a>
             <a href="#">Community</a>
             <a href="#">Join Now</a>
-            <div>
-                <button id="signOutBtn" type="button">Sign Out</button>
-            </div>
+            <a href="#">Sign In</a>
         </div>
     </header>
     <main>
@@ -67,13 +65,25 @@
             var id_token = googleUser.getAuthResponse().id_token;
 
             var xhr = new XMLHttpRequest();
-            xhr.open('POST', '/loginbygoogleaccount');
+            xhr.open('POST', '/login');
             xhr.setRequestHeader('Content-Type', 'application/json');
             xhr.onload = function() {
             console.log('Signed in as: ' + xhr.responseText);
+            if(xhr.responseText='success'){
+                signOut();
+                location.assign('/startpage.html');
+            }
             };
             xhr.send(JSON.stringify({token: id_token}));
     }
+    </script>
+    <script>
+        function signOut() {
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut().then(function () {
+            console.log('User signed out.');
+            });
+        }
     </script>
 </body>
 </html>

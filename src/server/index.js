@@ -1,3 +1,4 @@
+var path = require('path')
 const express = require('express')
 const app = express()
 const fetch = require('node-fetch')
@@ -6,9 +7,17 @@ const mongo = require('mongodb')
 const cookieParser = require('cookie-parser')
 dotenv.config();
 
+//Google Authentication
+const {OAuth2Client} = require('google-auth-library');
+const CLIENT_ID = '177921256407-jfh7lklk7ttmj69a7l98817hvm6ipl92.apps.googleusercontent.com';
+const client = new OAuth2Client(CLIENT_ID);
+
 /* Middleware*/
 const bodyParser = require('body-parser');
-
+app.use(cookieParser());
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
+app.set('views', '/Users/mac/Desktop/english-2021/src/client/views');
 //Data project endpoint
 const projectData = {};
 
@@ -16,7 +25,7 @@ const projectData = {};
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 console.log(__dirname)
-app.use(cookieParser());
+
 
 // Cors for cross origin allowance
 const cors = require('cors');
@@ -54,10 +63,59 @@ app.post('/postuserlogindata', async(req, res)=>{
 })
 
 //Get Log in route from google accounts
-app.post('/loginbygoogleaccount', (req, res)=>{
+app.post('/login', (req, res)=>{
     let token = req.body.token;
     console.log(token);
+
+    async function verify() {
+        const ticket = await client.verifyIdToken({
+            idToken: token,
+            audience: CLIENT_ID, 
+        });
+        const payload = ticket.getPayload();
+        const userid = payload['sub'];
+        console.log(payload);
+      }
+      verify()
+      .then(()=>{
+        res.cookie('session-token', token);
+        res.send('success');
+      }).
+      catch(console.error);
 })
+
+app.get('/startpage', checkAuthenticated, (req, res)=>{
+    let user = req.user;
+    res.render('startpage.html', {user});
+})
+
+app.get('/logout', (req, res)=>{
+    res.clearCookie('session-token');
+    res.redirect('/');
+})
+
+function checkAuthenticated(req, res, next){
+    let token = req.cookies['session-token'];
+    let user = {};
+    async function verify(){
+        const ticket = await client.verifyIdToken({
+            idToken: token,
+            audience: CLIENT_ID,
+        });
+        const payload = ticket.getPayload();
+        user.name = payload.name;
+        user.email = payload.email;
+        user.picture = payload.picture;
+    }
+    verify()
+    .then(()=>{
+        req.user = user;
+        next();
+    })
+    .catch(err=>{
+        res.redirect('/')
+    })
+}
 
 //Validate user credientials
 const validateUserLogin = async (userName, passWord)=>{
