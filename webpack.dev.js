@@ -36,31 +36,31 @@ module.exports = {
 },
 plugins: [
     new HtmlWebPackPlugin({
-        template: "./src/client/views/index.html",
+        template: "./src/client/views/index.ejs",
         filename: "./index.html",
         inject: true,
         chunks: ['index']
     }),
     new HtmlWebPackPlugin({
-        template: "./src/client/views/week_0.html",
+        template: "./src/client/views/week_0.ejs",
         filename: "./week_0.html",
         inject: true,
         chunks:  ['startpage']
     }),
     new HtmlWebPackPlugin({
-        template: "./src/client/views/week_3.html",
+        template: "./src/client/views/week_3.ejs",
         filename: "./week_3.html",
         inject: true,
         chunks: ['startpage']
     }),
     new HtmlWebPackPlugin({
-        template: "./src/client/views/startpage.html",
+        template: "./src/client/views/startpage.ejs",
         filename: "./startpage.html",
         inject: true,
         chunks: ['startpage']
     }),
     new HtmlWebPackPlugin({
-        template: "./src/client/views/week_0_notes.html",
+        template: "./src/client/views/week_0_notes.ejs",
         filename: "./week_0_notes.html",
         inject: true,
         chunks: ['startpage','topup']
