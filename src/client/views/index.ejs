@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="177921256407-jfh7lklk7ttmj69a7l98817hvm6ipl92.apps.googleusercontent.com">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <title>English: Log In or Sign Up</title>
+</head>
+<body class="body-container">
+    <header>
+        <div class="brand-name">
+            <a href="#">Brand Name</a>
+        </div>
+        <div class="navibar">
+            <a href="#">Discover</a>
+            <a href="#">Mentorship</a>
+            <a href="#">Community</a>
+            <a href="#">Join Now</a>
+            <a href="#">Sign In</a>
+        </div>
+    </header>
+    <main>
+        <div class="welcome">
+            <h1>Welcome to your English learning journey</h1>
+        </div>
+        <form>
+            <div>
+                <input id="username" type="text" placeholder="Email or phone number" name="username" pattern="^([a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3})|(\d{3}-\d{3}-\d{4})$" title="Check your username again" required>
+                <input id="password" type="password" placeholder="Password" name="password" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                        title="Check your password again" required>
+            </div>
+            <div>
+                <button id="loginBtn" type="submit">Sign In</button>
+            </div>
+            <div id="password-reset">
+                <a href="#">Forgot password?</a>
+            </div>
+        </form>
+        <div class="signup">
+            <hr>
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        </div>
+        <div class="background-image">
+            <img src="../media/background.png">
+        </div>
+
+        <div class="lesson-section">
+            Discover what will you learn each week
+        </div>
+        <div class="week-section">
+            <a href="startpage.html">intro here</a>
+        </div>
+        <div class="mentorship-program">
+            Study with experienced mentors who can help you master English
+        </div>
+        <div class="mentor-profile">
+            mentors' profile here
+        </div>
+    </main>
+    <script>
+        function onSignIn(googleUser) {
+            var id_token = googleUser.getAuthResponse().id_token;
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/login');
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.onload = function() {
+            console.log('Signed in as: ' + xhr.responseText);
+            if(xhr.responseText='success'){
+                signOut();
+                location.assign('/startpage.html');
+            }
+            };
+            xhr.send(JSON.stringify({token: id_token}));
+    }
+    </script>
+    <script>
+        function signOut() {
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut().then(function () {
+            console.log('User signed out.');
+            });
+        }
+    </script>
+</body>
+</html>
