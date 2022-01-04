@@ -12,7 +12,9 @@ async function checkUserCreds(){
     }else {   
         //If input provided then post them to server side for validation
         try {
-            postUserLoginData('/postuserlogindata', {userName: userName, passWord: passWord})
+            const result = await postUserLoginData('/postuserlogindata', {userName: userName, passWord: passWord})
+            .then((res)=> res.json())
+            console.log(result);
         }catch(error){
             console.log("error", error);
         }
