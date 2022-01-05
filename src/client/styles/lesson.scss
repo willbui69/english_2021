@@ -1,42 +1,74 @@
 .lesson-container {
     display: grid;
     grid-template-columns: 10% 80% 10%;
-    grid-template-rows: 10vh 60vh 25vh 5vh;
+    grid-auto-rows: auto;
+    overflow-y: scroll;
     grid-template-areas: 
     "title title title"
-    ". video ."
-    ". refs ."
+    "video video video"
+    "refs refs refs"
     ". next .";
     grid-gap: 5px;
+    margin-right: 5%;
 }
 
 .lesson-title {
     grid-area: title;
     height: 10vh;
-    border: 1px solid red;
+    p {
+        margin-top: 7vh;
+        font-size: 24px;
+        span {
+            color: grey;
+        }
+    }
 }
 
 .lesson-video {
     grid-area: video;
-    height: 60vh;
-    border: 1px solid blue;
+    height: 60%;
     iframe {
         min-width: 100%;
-        min-height: 100%;
+        height: 700px;
     }
+    margin-top: 2%;
 }
 
 .lesson-references {
     grid-area: refs;
-    height: 25vh;
     ul li a {
         margin-top: 20px;
+        color: #E44D6A;
+        font-size: 14px;
     }
-    border: 1px solid green;
 }
 
 .next-lesson {
     grid-area: next;
-    height: 5vh;
-    border: 1px solid red;
+    height: 15vh;
+    text-align: right;
+    a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 8px 16px;
+    }
+
+    a:hover {
+        background-color: #ddd;
+        color: black;
+    }
 }
+
+.previous {
+    background-color: #f1f1f1;
+    color: black;
+  }
+
+  .next {
+    background-color: #E44D6A;
+    color: white;
+  }
+  
+  .round {
+    border-radius: 50%;
+  }
