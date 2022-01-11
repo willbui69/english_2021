@@ -17,11 +17,19 @@
     grid-area: welcome;
 }
 
-.intro {
+#intro {
     grid-area: intro;
     p {
         font-size: 16px;
         font-family: 'Times New Roman', Times, serif;
+        ul li {
+            font-size: 16px;
+            font-family: 'Times New Roman', Times, serif;
+            b {
+                font-size: 16px;
+                font-family: 'Times New Roman', Times, serif;
+            }
+        }
     }
 }
 
@@ -33,7 +41,7 @@
     }
 }
 
-.instr {
+#instr {
     grid-area: instr;
     p {
         font-size: 16px;
@@ -48,7 +56,7 @@
     }
 }
 
-.teach {
+#teach {
     grid-area: teaching;
     font-size: 16px;
     font-family: 'Times New Roman', Times, serif;

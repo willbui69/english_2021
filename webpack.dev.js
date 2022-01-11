@@ -83,6 +83,12 @@ plugins: [
         filename: "./week_0_lesson_2.html",
         inject: true,
         chunks: ['startpage']
+    }),
+    new HtmlWebPackPlugin({
+        template: "./src/client/views/teach.html",
+        filename: "./teach.html",
+        inject: true,
+        chunks: ['startpage', 'test']
     })
 ]
 }
