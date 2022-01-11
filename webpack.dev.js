@@ -6,7 +6,8 @@ module.exports = {
     entry: {
         index: './src/client/index.js',
         startpage: './src/client/startpage.js',
-        topup: './src/client/topup.js'
+        topup: './src/client/topup.js',
+        test: './src/client/test.js'
     },
     output: {
         libraryTarget: 'var',
@@ -48,6 +49,12 @@ plugins: [
         chunks:  ['startpage']
     }),
     new HtmlWebPackPlugin({
+        template: "./src/client/views/test.html",
+        filename: "./test.html",
+        inject: true,
+        chunks:  ['startpage', 'test']
+    }),
+    new HtmlWebPackPlugin({
         template: "./src/client/views/week_3.html",
         filename: "./week_3.html",
         inject: true,
@@ -68,6 +75,12 @@ plugins: [
     new HtmlWebPackPlugin({
         template: "./src/client/views/week_0_lesson_1.html",
         filename: "./week_0_lesson_1.html",
+        inject: true,
+        chunks: ['startpage']
+    }),
+    new HtmlWebPackPlugin({
+        template: "./src/client/views/week_0_lesson_2.html",
+        filename: "./week_0_lesson_2.html",
         inject: true,
         chunks: ['startpage']
     })

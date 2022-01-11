@@ -1,0 +1,90 @@
+#test {
+    display: grid;
+    grid-template-columns: 10% 70% 20%;
+    grid-auto-rows: 35vh 40vh 10vh;
+    grid-template-areas: 
+    "intro intro ."
+    ". question ."
+    "notice notice .";
+    grid-gap: 5px;
+    margin-right: 5px;
+}
+
+#test-intro {
+    height: 30vh;
+    grid-area: intro;
+    text-align: center;
+    color: #2867B2;
+    li {
+        list-style-type: none;
+    }
+}
+
+#question-form {
+    grid-area: question;
+    background-color: #2867B2;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#notice {
+    grid-area: notice;
+    text-align: center;
+    color: #2867B2;
+}
+
+#notice span {
+    color: #DA1414;
+    font-weight: bolder;
+}
+
+#question {
+    color: white;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn {
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #2867B2;
+    background-color: white;
+    outline: none;
+}
+
+.btn:hover {
+    border-color: black;
+}
+
+.btn-selected {
+    background-color: #008CBA;
+    color: white;
+}
+
+.start-btn, .next-btn, .result-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
+
