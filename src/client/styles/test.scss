@@ -7,7 +7,6 @@
     ". question ."
     "notice notice .";
     grid-gap: 5px;
-    margin-right: 5px;
 }
 
 #test-intro {
@@ -54,7 +53,7 @@
     margin: 20px 0;
 }
 
-.btn {
+.button {
     border: 1px solid whitesmoke;
     border-radius: 5px;
     padding: 5px 10px;
@@ -63,7 +62,7 @@
     outline: none;
 }
 
-.btn:hover {
+.button:hover {
     border-color: black;
 }
 

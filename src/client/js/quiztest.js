@@ -46,7 +46,7 @@ function showQuestion(question) {
         const button = document.createElement('button')
         button.innerText = answer.text
         button.value = answer.iscorrect
-        button.classList.add('btn')
+        button.classList.add('button')
         button.addEventListener('click', selectAnswer)
         answerButtonElement.appendChild(button)
     })
@@ -84,7 +84,7 @@ function showResult() {
     if(correctAnswer < 11) {
         resultButton.innerHTML = `Chúc mừng bạn hoàn thành bài test! Bạn trả lời đúng được ${correctAnswer} trong tổng số 15 câu hỏi.
                               Tham gia khoá học sẽ giúp bạn có được nền tảng tốt hơn cho các khoá học nâng cao khác.
-                              Tìm hiểu thêm khoá học tại: <a href="startpage.html">đây</a><br>
+                              <br>
                               Kiểm tra lại bài test tại đây: <a href="test.html">test</a>`
     } else {
         resultButton.innerHTML = `Chúc mừng bạn hoàn thành bài test! Bạn trả lời đúng được ${correctAnswer} trong tổng số 15 câu hỏi
