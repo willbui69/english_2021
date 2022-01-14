@@ -33,8 +33,9 @@ async function addSidebarTemplate(){
                     <i class="fab fa-twitter"></i>
                 </a>
             </p>
+            <button id="toggle-btn" class="toggle-button"> Menu </button>
         </header>
-        <nav>
+        <nav class="navi-items">
             <hr>
             <ul>
                 <li>
