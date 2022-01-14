@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 html {
     height: 100vh;
     width: 100vw;
@@ -9,13 +13,93 @@ html {
 
 .body-container {
     display: grid;
-    grid-template-columns: 25% auto;
-    grid-template-rows: auto;
+    grid-template-columns: 100%;
+    grid-template-rows: 18% 82%;
     grid-template-areas: 
-    "sidebar main";
+    "sidebar"
+    "main";
 }
 
 .body-container a:hover {
     text-decoration: underline;
 }
 
+.navi-items {
+        display: none;
+}
+
+.navi-items.active {
+    display: flex;
+}
+
+.aside-container {
+    grid-area: sidebar;
+    overflow:scroll;
+    background-color: #2867B2;
+}
+
+.main-container {
+    grid-area: main;
+    overflow: scroll;
+    padding: 5px;
+    margin: 5px;
+}
+
+//responsiveness for tablets and large phones
+
+ @media screen and (min-width: 600px){
+     .body-container {
+         display: grid;
+         grid-template-columns: 40% 60%;
+         grid-template-rows: 100%;
+         grid-template-areas: 
+         "sidebar main";
+         grid-gap: 5px;
+     }
+
+     .aside-container {
+        grid-area: sidebar;
+        overflow-y: scroll;
+        background-color: #2867B2;
+       // min-width: 250px;
+        position: sticky;
+        top: 0;
+        bottom: 0;
+    }
+
+    .main-container {
+        grid-area: main;
+        overflow: scroll;
+    }
+     .navi-items {
+        display: block;
+     }
+
+     .toggle-button {
+         display: none;
+     }
+ }
+
+ //Responsiveness for laptops/desktops
+
+ @media screen and (min-width: 768px) {
+    .body-container {
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 100%;
+        grid-template-areas: 
+        "sidebar main";
+        grid-gap: 5px;
+    }
+
+    .aside-container {
+        grid-area: sidebar;
+        overflow-y: scroll;
+        background-color: #2867B2;
+    }
+
+    .main-container {
+        grid-area: main;
+        overflow: scroll;
+    }
+ }
