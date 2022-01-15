@@ -1,27 +1,16 @@
+
 .content-header {
     display: grid;
-    grid-template-columns: 15% auto 15%;
-    grid-template-rows: 15vh 85vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 15% 85%;
     grid-template-areas: 
-    "header-navibar header-navibar header-navibar"
-    ". lesson-section .";
-    grid-gap: 5px;
+    "header-navibar"
+    "lesson-section";
 }
 
 .lesson-header {
-    height: 15vh;
     grid-area: header-navibar;
     width: 100%;
-    position: fixed;
-    border-bottom: 2px solid #EAEAEA;
-    background-color: whitesmoke;
-}
-
-.lesson-header p {
-    margin-top: 7vh;
-    margin-left: 20vh;
-    font-size: 28px;
-    color: black;
 }
 
 .lesson-section {
@@ -32,23 +21,74 @@
     align-items: center;
 }
 
-.sticky {
-    position: fixed;
-    margin-top: 0;
-    font-size: 14px;
-
-}
-
 .card {
     border: 1px solid #777;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: .5rem;
-    padding: 16px;
+    padding: 10px;
     background-color: whitesmoke;
     width: 100%;
     min-height: 10%;
+    margin-top: 5px;
 }
 
 .card:hover {
     background-color: paleturquoise;
+}
+
+.lesson-header p {
+    margin-top: 7vh;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+//responsiveness for tablets and large phones
+@media screen and (min-width: 600px) {
+    .content-header {
+        display: grid;
+        grid-template-columns: 15% auto 15%;
+        grid-template-rows: 15vh 85vh;
+        grid-template-areas: 
+        "header-navibar header-navibar header-navibar"
+        ". lesson-section .";
+        grid-gap: 5px;
+    }
+    
+    .lesson-header {
+        height: 15vh;
+        grid-area: header-navibar;
+        width: 100%;
+        position: fixed;
+        border-bottom: 2px solid #EAEAEA;
+        background-color: whitesmoke;
+    }
+    
+    .lesson-header p {
+        margin-top: 7vh;
+        margin-left: 20vh;
+        font-size: 28px;
+        color: black;
+    }
+    
+    .lesson-section {
+        grid-area: lesson-section;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .card {
+        border: 1px solid #777;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: .5rem;
+        padding: 16px;
+        background-color: whitesmoke;
+        width: 100%;
+        min-height: 10%;
+    }
+    
+    .card:hover {
+        background-color: paleturquoise;
+    }
 }
