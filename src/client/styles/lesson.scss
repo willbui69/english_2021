@@ -1,37 +1,33 @@
-.lesson-container {
-    display: grid;
-    grid-template-columns: 10% 80% 10%;
-    grid-auto-rows: auto;
-    overflow-y: scroll;
-    grid-template-areas: 
-    "title title title"
-    "video video video"
-    "refs refs refs"
-    ". next .";
-    grid-gap: 5px;
-    margin-right: 5%;
-}
+//Responsiveness for mobile phones
+ .lesson-container {
+     display: grid;
+     grid-template-columns: 100%;
+     grid-auto-rows: 10vh 30vh 15vh 15vh;
+     grid-template-areas: 
+     "title"
+     "video"
+     "refs"
+     "next";
+ }
 
 .lesson-title {
     grid-area: title;
-    height: 10vh;
     p {
-        margin-top: 7vh;
         font-size: 24px;
-        span {
-            color: grey;
-        }
+        margin-top: 2vh;
+        font-weight: 300;
+        line-height: 40px;
+        font-family:sans-serif;
+        color: #2e3d49;
     }
 }
 
 .lesson-video {
     grid-area: video;
-    height: 60%;
     iframe {
         min-width: 100%;
-        height: 700px;
+        height: 30vh;
     }
-    margin-top: 2%;
 }
 
 .lesson-references {
@@ -45,7 +41,6 @@
 
 .next-lesson {
     grid-area: next;
-    height: 15vh;
     text-align: right;
     a {
         text-decoration: none;
@@ -72,3 +67,67 @@
   .round {
     border-radius: 50%;
   }
+
+//Responsiveness for laptops/desktops
+@media screen and (min-width: 768px) {
+    .lesson-container {
+        display: grid;
+        grid-template-columns: 10% 80% 10%;
+        grid-auto-rows: auto;
+        overflow-y: scroll;
+        grid-template-areas: 
+        "title title title"
+        "video video video"
+        "refs refs refs"
+        ". next .";
+        grid-gap: 5px;
+        margin-right: 5%;
+    }
+    
+    .lesson-title {
+        grid-area: title;
+        height: 10vh;
+        p {
+            margin-top: 7vh;
+            font-size: 24px;
+            span {
+                color: grey;
+            }
+        }
+    }
+    
+    .lesson-video {
+        grid-area: video;
+        height: 60%;
+        iframe {
+            min-width: 100%;
+            height: 700px;
+        }
+        margin-top: 2%;
+    }
+    
+    .lesson-references {
+        grid-area: refs;
+        ul li a {
+            margin-top: 20px;
+            color: #E44D6A;
+            font-size: 14px;
+        }
+    }
+    
+    .next-lesson {
+        grid-area: next;
+        height: 15vh;
+        text-align: right;
+        a {
+            text-decoration: none;
+            display: inline-block;
+            padding: 8px 16px;
+        }
+    
+        a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+    }
+}

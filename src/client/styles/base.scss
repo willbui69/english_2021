@@ -14,7 +14,7 @@ html {
 .body-container {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 18% 82%;
+    grid-template-rows: 20% 80%;
     grid-template-areas: 
     "sidebar"
     "main";
@@ -81,7 +81,6 @@ html {
  }
 
  //Responsiveness for laptops/desktops
-
  @media screen and (min-width: 768px) {
     .body-container {
         display: grid;
@@ -100,6 +99,5 @@ html {
 
     .main-container {
         grid-area: main;
-        overflow: scroll;
     }
  }

@@ -11,6 +11,14 @@
 .lesson-header {
     grid-area: header-navibar;
     width: 100%;
+    p {
+        margin-top: 7vh;
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 40px;
+        font-family: 'Times New Roman', Times, serif;
+        color: #2e3d49;
+    }
 }
 
 .lesson-section {
@@ -19,6 +27,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    overflow:scroll;
 }
 
 .card {
@@ -30,20 +39,17 @@
     width: 100%;
     min-height: 10%;
     margin-top: 5px;
+    h3 {
+        font-size: small;
+    }
 }
 
 .card:hover {
     background-color: paleturquoise;
 }
 
-.lesson-header p {
-    margin-top: 7vh;
-    font-size: 16px;
-    font-family: 'Times New Roman', Times, serif;
-    color: black;
-}
-//responsiveness for tablets and large phones
-@media screen and (min-width: 600px) {
+//responsiveness for laptops and desktops
+@media screen and (min-width: 768px) {
     .content-header {
         display: grid;
         grid-template-columns: 15% auto 15%;
@@ -61,13 +67,15 @@
         position: fixed;
         border-bottom: 2px solid #EAEAEA;
         background-color: whitesmoke;
-    }
-    
-    .lesson-header p {
-        margin-top: 7vh;
-        margin-left: 20vh;
-        font-size: 28px;
-        color: black;
+        p {
+            margin-top: 7vh;
+            margin-left: 20vh;
+            font-size: 28px;
+            font-weight: 300;
+            line-height: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            color: #2e3d49;
+        }
     }
     
     .lesson-section {
@@ -76,6 +84,7 @@
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
+        overflow:scroll;
     }
     
     .card {
@@ -86,6 +95,9 @@
         background-color: whitesmoke;
         width: 100%;
         min-height: 10%;
+        h3 {
+            font-size: x-large;
+        }
     }
     
     .card:hover {

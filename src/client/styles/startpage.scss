@@ -14,20 +14,20 @@
 
 .welcome {
     grid-area: welcome;
-    font-size: 1rem;
+    
 }
 
 #intro {
     grid-area: intro;
     overflow:scroll;
     p {
-        font-size: 16px;
+        font-size: small;
         font-family: 'Times New Roman', Times, serif;
         ul li {
-            font-size: 16px;
+            font-size: small;
             font-family: 'Times New Roman', Times, serif;
             b {
-                font-size: 16px;
+                font-size: small;
                 font-family: 'Times New Roman', Times, serif;
             }
         }
@@ -47,11 +47,11 @@
     grid-area: instr;
     overflow: scroll;
     p {
-        font-size: 16px;
+        font-size: small;
         font-family: 'Times New Roman', Times, serif;
         }
     ol li {
-        font-size: 16px;
+        font-size: small;
         font-family: 'Times New Roman', Times, serif;
         a {
             color: red;
@@ -62,13 +62,14 @@
 #teach {
     grid-area: teaching;
     overflow: scroll;
-    font-size: 16px;
+    font-size: small;
     font-family: 'Times New Roman', Times, serif;
     p a {
         color: red;
     }
 }
 
+//responsiveness for desktops and laptops
 @media screen and (min-width: 768px) {
     .startpage-container {
         display: grid;
@@ -82,12 +83,55 @@
         "teaching" ;
     }
 
+    #intro {
+        grid-area: intro;
+        overflow:scroll;
+        p {
+            font-size: 16px;
+            font-family: 'Times New Roman', Times, serif;
+            ul li {
+                font-size: 16px;
+                font-family: 'Times New Roman', Times, serif;
+                b {
+                    font-size: 16px;
+                    font-family: 'Times New Roman', Times, serif;
+                }
+            }
+        }
+    }
+
     .video {
         text-align: center;
         grid-area: video;
         iframe {
             min-width: 80%;
             min-height: 100%;
+        }
+    }
+
+    #instr {
+        grid-area: instr;
+        overflow: scroll;
+        p {
+            font-size: 16px;
+            font-family: 'Times New Roman', Times, serif;
+            }
+        ol li {
+            font-size: 16px;
+            font-family: 'Times New Roman', Times, serif;
+            a {
+                color: red;
+            }
+        }
+    }
+    
+    #teach {
+        grid-area: teaching;
+        overflow: scroll;
+        font-size: 16px;
+        font-family: 'Times New Roman', Times, serif;
+        p a {
+            color: red;
         }
     }
 }
