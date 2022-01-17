@@ -36,6 +36,8 @@ html {
     grid-area: sidebar;
     overflow:scroll;
     background-color: #2867B2;
+    min-height: 20vh;
+    max-height: 100vh;
 }
 
 .main-container {
