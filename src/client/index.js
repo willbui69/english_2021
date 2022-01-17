@@ -1,10 +1,21 @@
-import { checkUserCreds } from './js/handleUserCredentials';
+import { addSidebarTemplate } from './js/sidebarTemplate.js';
+import './styles/base.scss'
+import './styles/navi.scss'
+import './styles/topic.scss'
+import './styles/lesson.scss'
 import './styles/index.scss'
-import google from './media/google.png'
-import background from './media/background.png'
 
-document.getElementById('loginBtn').addEventListener('click', checkUserCreds);
+//Add sidebar template to the startpage.html
+addSidebarTemplate();
+
+const toggleButton = document.getElementById('toggle-btn')
+const naviItems = document.getElementsByClassName('navi-items')[0]
+
+toggleButton.addEventListener('click', ()=> {
+    naviItems.classList.toggle('active')
+}
+)
 
 export {
-    checkUserCreds
+    addSidebarTemplate
 }
