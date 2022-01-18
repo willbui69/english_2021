@@ -4,7 +4,7 @@ async function addSidebarTemplate(){
     <aside class="aside-container">
         <header class="header">
             <h1>
-                <a href="startpage.html">English - Start Here</a>
+                <a href=".">English - Start Here</a>
             </h1>
             <p>
                 <a class="mentorship-program" href="#">Mentorship Program</a>
