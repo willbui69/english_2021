@@ -1,7 +1,6 @@
 var path = require('path')
 const express = require('express')
 const app = express()
-const fetch = require('node-fetch')
 const dotenv = require('dotenv')
 const port = process.env.PORT || 8080
 
