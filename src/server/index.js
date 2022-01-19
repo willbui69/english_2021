@@ -9,7 +9,7 @@ dotenv.config();
 /* Middleware*/
 const bodyParser = require('body-parser');
 
-//Here we are configuring express to use body-parser as middle-ware.
+//Configuring express to use body-parser as middle-ware.
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 console.log(__dirname)
@@ -22,7 +22,8 @@ app.use(express.static('dist'))
 
 
 app.get('/', function (req, res) {
-    res.sendFile('dist/index.html')
+   // res.sendFile('dist/index.html')
+    res.sendFile(path.join(__dirname, '../dist', 'index.html'));
 })
 
 // designates what port the app will listen to for incoming requests
