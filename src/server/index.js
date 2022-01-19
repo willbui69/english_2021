@@ -1,3 +1,4 @@
+var path = require('path')
 const express = require('express')
 const app = express()
 const dotenv = require('dotenv')
@@ -19,9 +20,14 @@ app.use(cors());
 
 app.use(express.static('dist'))
 
-app.get('/', function (req, res) {
-    res.sendFile('index.html', { root: __dirname });
-})
+// app.get('/', function (req, res) {
+//     res.sendFile('index.html', { root: __dirname });
+// })
+
+app.get('*', function (req, res) {
+    const index = path.join(__dirname, 'build', 'index.html');
+    res.sendFile(index);
+  });
 
 // designates what port the app will listen to for incoming requests
 app.listen(port, function() {
