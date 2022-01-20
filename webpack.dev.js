@@ -42,6 +42,16 @@ plugins: [
         chunks: ['index']
     }),
     new HtmlWebPackPlugin({
+        template: "./src/client/views/head.html",
+        filename: "./head.html",
+    }),
+    new HtmlWebPackPlugin({
+        template: "./src/client/views/sidebar.html",
+        filename: "./sidebar.html",
+        inject: true,
+        chunks: ['index']
+    }),
+    new HtmlWebPackPlugin({
         template: "./src/client/views/week_0.html",
         filename: "./week_0.html",
         inject: true,

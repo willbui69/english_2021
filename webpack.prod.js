@@ -35,7 +35,7 @@ module.exports = {
 },
 plugins: [
     new HtmlWebPackPlugin({
-        template: "./src/client/views/index.html",
+        template: "./src/client/views/index.ejs",
         filename: "./index.html",
         inject: true,
         chunks: ['index']
