@@ -1,3 +1,4 @@
+var path = require('path')
 const express = require('express')
 const app = express()
 const dotenv = require('dotenv')
@@ -18,6 +19,7 @@ const cors = require('cors');
 app.use(cors());
 
 app.use(express.static('dist'))
+
 
 app.get('/', function (req, res) {
     res.sendFile('dist/index.html')
