@@ -4,6 +4,7 @@ import './styles/navi.scss'
 import './styles/topic.scss'
 import './styles/lesson.scss'
 import './styles/index.scss'
+import './styles/mentorship.scss'
 
 //Add sidebar template to the startpage.html
 addSidebarTemplate();
