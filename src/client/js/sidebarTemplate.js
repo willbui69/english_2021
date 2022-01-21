@@ -7,7 +7,7 @@ async function addSidebarTemplate(){
                 <a href=".">English - Start Here</a>
             </h1>
             <p>
-                <a class="mentorship-program" href="#">Mentorship Program</a>
+                <a class="mentorship-program" href="mentorship_program.html">Mentorship Program</a>
             </p>
             <p>
                 <a class="donate" href="#">Donate</a>

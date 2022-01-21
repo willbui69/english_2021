@@ -41,6 +41,12 @@ plugins: [
         chunks: ['index']
     }),
     new HtmlWebPackPlugin({
+        template: "./src/client/views/mentorship_program.html",
+        filename: "./mentorship_program.html",
+        inject: true,
+        chunks: ['index']
+    }),
+    new HtmlWebPackPlugin({
         template: "./src/client/views/week_0.html",
         filename: "./week_0.html",
         inject: true,
