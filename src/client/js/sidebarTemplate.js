@@ -17,19 +17,19 @@ async function addSidebarTemplate(){
                 <br>
                 <a href="mailto:vandongbui.work@gmail.com">vandongbui.work@gmail.com</a>
                 <br>
-                <a class="mr-1" href="#">
+                <a class="mr-1" href="https://www.facebook.com/will.bui.9619/">
                 <i class="fab fa-facebook"></i>
                 </a>
-                <a class="mr-1" href="#">
+                <a class="mr-1" href="https://github.com/willbui69">
                     <i class="fab fa-github"></i>
                 </a>
-                <a class="mr-1" href="#">
+                <a class="mr-1" href="https://www.linkedin.com/in/willbui9619/">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a class="mr-1" href="#">
+                <a class="mr-1" href="https://www.instagram.com/will_bui1919/">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a class="mr-1" href="#">
+                <a class="mr-1" href="https://twitter.com/VanDongBui1">
                     <i class="fab fa-twitter"></i>
                 </a>
             </p>
