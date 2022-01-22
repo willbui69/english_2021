@@ -2,7 +2,6 @@
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 10% 30% 30% 30% 20%;
-    overflow-y: scroll;
     grid-template-areas:
     "welcome"
     "intro"
@@ -36,7 +35,6 @@
 
 .video {
     grid-area: video;
-    overflow: scroll;
     iframe {
         min-width: 100%;
         min-height: 100%;
@@ -85,7 +83,6 @@
 
     #intro {
         grid-area: intro;
-        overflow:scroll;
         p {
             font-size: 16px;
             font-family: 'Times New Roman', Times, serif;
@@ -111,7 +108,6 @@
 
     #instr {
         grid-area: instr;
-        overflow: scroll;
         p {
             font-size: 16px;
             font-family: 'Times New Roman', Times, serif;
@@ -127,7 +123,6 @@
     
     #teach {
         grid-area: teaching;
-        overflow: scroll;
         font-size: 16px;
         font-family: 'Times New Roman', Times, serif;
         p a {
