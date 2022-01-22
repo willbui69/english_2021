@@ -42,6 +42,12 @@ plugins: [
         chunks: ['index']
     }),
     new HtmlWebPackPlugin({
+        template: "./src/client/views/donate.html",
+        filename: "./donate.html",
+        inject: true,
+        chunks: ['index']
+    }),
+    new HtmlWebPackPlugin({
         template: "./src/client/views/mentorship_program.html",
         filename: "./mentorship_program.html",
         inject: true,

@@ -47,6 +47,12 @@ plugins: [
         chunks: ['index']
     }),
     new HtmlWebPackPlugin({
+        template: "./src/client/views/donate.html",
+        filename: "./donate.html",
+        inject: true,
+        chunks: ['index']
+    }),
+    new HtmlWebPackPlugin({
         template: "./src/client/views/week_0.html",
         filename: "./week_0.html",
         inject: true,
