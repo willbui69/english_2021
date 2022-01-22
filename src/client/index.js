@@ -5,6 +5,7 @@ import './styles/topic.scss'
 import './styles/lesson.scss'
 import './styles/index.scss'
 import './styles/mentorship.scss'
+import './styles/donate.scss'
 
 //Add sidebar template to the startpage.html
 addSidebarTemplate();
