@@ -18,6 +18,7 @@
 
 #intro {
     grid-area: intro;
+    overflow:scroll;
     p {
         font-size: small;
         font-family: 'Times New Roman', Times, serif;
