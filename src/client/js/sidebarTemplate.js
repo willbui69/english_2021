@@ -97,35 +97,35 @@ async function addSidebarTemplate(){
             <ul>
                 <li>
                     <span class="academic-integrity">
-                        <a href="#">
+                        <a href="notfound.html">
                             Academic Integrity
                         </a>
                     </span>
                 </li>
                 <li>
                 <span class="academic-integrity">
-                    <a href="#">
+                    <a href="notfound.html">
                         Gradebook
                     </a>
                 </span>
             </li>
                 <li>
                     <span class="academic-integrity">
-                        <a href="#">
+                        <a href="notfound.html">
                             FAQs
                         </a>
                     </span>
                 </li>
                 <li>
                     <span class="academic-integrity">
-                        <a href="#">
+                        <a href="notfound.html">
                             Staff
                         </a>
                     </span>
                 </li>
                 <li>
                 <span class="academic-integrity">
-                    <a href="#">
+                    <a href="notfound.html">
                         Syllabus
                     </a>
                 </span>
@@ -135,21 +135,21 @@ async function addSidebarTemplate(){
             <ul>
                 <li>
                     <span class ="research">
-                        <a href="#">
+                        <a href="notfound.html">
                             Research
                         </a>
                     </span>
                 </li>
                 <li>
                 <span class ="shadowing-technique">
-                    <a href="#">
+                    <a href="notfound.html">
                         Shadowing Technique
                     </a>
                 </span>
             </li>
                 <li>
                     <span class="paraphase-techniques">
-                        <a href="#">
+                        <a href="notfound.html">
                             Paraphase Techniques
                         </a>
                     </span>
@@ -159,28 +159,28 @@ async function addSidebarTemplate(){
             <ul>
                 <li>
                     <span class="youtube">
-                        <a href="#">
+                        <a href="notfound.html">
                             Youtube
                         </a>
                     </span>
                 </li>
                 <li>
                 <span class="facebook-page">
-                    <a href="#">
+                    <a href="notfound.html">
                         Facebook Page
                     </a>
                 </span>
             </li>
             <li>
                 <span class="facebook-group">
-                    <a href="#">
+                    <a href="notfound.html">
                         Facebook Group
                     </a>
                 </span>
             </li>
             <li>
                 <span class="github">
-                    <a href="#">
+                    <a href="https://github.com/willbui69">
                         Github
                     </a>
                 </span>

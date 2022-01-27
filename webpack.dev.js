@@ -94,6 +94,12 @@ plugins: [
         filename: "./teach.html",
         inject: true,
         chunks: ['index', 'test']
+    }),
+    new HtmlWebPackPlugin({
+        template: "./src/client/views/notfound.html",
+        filename: "./notfound.html",
+        inject: true,
+        chunks: ['index']
     })
 ]
 }
