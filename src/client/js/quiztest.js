@@ -140,12 +140,12 @@ const questions = [
         ]
     },
     {
-        question: `Chọn đáp án thay thế cho từ được gạch chân trong câu dưới đây: <br> <br>Working as a receptionist for my uncle’s business taught me <u><i>to handle customer complaints, answering the telephone, and how to maintain a Rolodex.</i></u>`,
+        question: `Chọn đáp án thay thế cho từ được gạch chân trong câu dưới đây: <br> <br>Becoming as a mother has taught me <u><i>to raise my kids, doing housework, and how to be more responsible for my life.</i></u>`,
         answers: [
-            {text: 'planning to handle customer complaints, answering the telephone, and how to maintain a Rolodex.',  iscorrect: false},
-            {text:'How to handle customer complaints, answering telephone, and maintaining a Rolodex.', iscorrect: false},
-            {text:'How to handle customer complaints, how to answer the telephone, and how to maintain Rolodex.', iscorrect: true},
-            {text:'Handling customer complaints, answering the telephone, and maintenance of Rolodex.', iscorrect: false}
+            {text: 'planning to raise my kids,  doing housework, and how to be more responsible for my life.',  iscorrect: false},
+            {text:'How to raise my kids, doing housework, and being more responsible for my life.', iscorrect: false},
+            {text:'How to raise my kids , how to do housework, and how to be more responsible for my life.', iscorrect: true},
+            {text:'Rasing my kids, doing housework, and being more responsilbe for my life.', iscorrect: false}
         ]
     },
     {
@@ -158,7 +158,7 @@ const questions = [
         ]
     },
     {
-        question: `Chọn đáp án thay thế cho từ được gạch chân trong câu dưới đây: <br> <br>If you want to create a beautiful room, having a large sum of money is not nearly so important to the finished setting <u><i>as is the knowledge of basic decorating</i></u>`,
+        question: `Chọn đáp án thay thế cho từ được gạch chân trong câu dưới đây: <br> <br>If you want to create a beautiful room, having a lot of money is not nearly so important to the finished setting <u><i>as is the knowledge of basic decorating</i></u>`,
         answers: [
             {text: 'As is the knowledge of basic decorating',  iscorrect: false},
             {text:'As knowing the basics of decorating', iscorrect: true},
