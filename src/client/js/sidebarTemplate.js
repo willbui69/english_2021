@@ -70,25 +70,31 @@ async function addSidebarTemplate(){
                 </li>
                 <li>
                     <span class="week">
-                        <a href="week_5.html">Tuần 5</a>
-                        Expression
+                        <a href="notfound.html">Tuần 5</a>
+                        English Tools & Cyber Safety
                     </span>
                 </li>
                 <li>
                     <span class="week">
                         <a href="week_6.html">Tuần 6</a>
+                        Expression
+                    </span>
+                </li>
+                <li>
+                    <span class="week">
+                        <a href="notfound.html">Tuần 7</a>
                         English In Daily Conversation
                     </span>
                 </li>
                 <li>
                     <span class="week">
-                        <a href="week_8.html">Tuần 7</a>
+                        <a href="notfound.html">Tuần 8</a>
                         English in Work
                     </span>
                 </li>
                 <li>
                     <span class="week">
-                        <a href="week_8.html">Tuần 8</a>
+                        <a href="notfound.html">Tuần 9</a>
                         English in Academia
                     </span>
                 </li>
