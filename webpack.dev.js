@@ -60,6 +60,18 @@ plugins: [
         chunks:  ['index']
     }),
     new HtmlWebPackPlugin({
+        template: "./src/client/views/week_1.html",
+        filename: "./week_1.html",
+        inject: true,
+        chunks:  ['index']
+    }),
+    new HtmlWebPackPlugin({
+        template: "./src/client/views/week_2.html",
+        filename: "./week_2.html",
+        inject: true,
+        chunks:  ['index']
+    }),
+    new HtmlWebPackPlugin({
         template: "./src/client/views/test.html",
         filename: "./test.html",
         inject: true,
@@ -68,6 +80,18 @@ plugins: [
     new HtmlWebPackPlugin({
         template: "./src/client/views/week_3.html",
         filename: "./week_3.html",
+        inject: true,
+        chunks: ['index']
+    }),
+    new HtmlWebPackPlugin({
+        template: "./src/client/views/week_4.html",
+        filename: "./week_4.html",
+        inject: true,
+        chunks: ['index']
+    }),
+    new HtmlWebPackPlugin({
+        template: "./src/client/views/week_6.html",
+        filename: "./week_6.html",
         inject: true,
         chunks: ['index']
     }),
@@ -86,6 +110,18 @@ plugins: [
     new HtmlWebPackPlugin({
         template: "./src/client/views/week_0_lesson_2.html",
         filename: "./week_0_lesson_2.html",
+        inject: true,
+        chunks: ['index']
+    }),
+    new HtmlWebPackPlugin({
+        template: "./src/client/views/week_1_lesson_1.html",
+        filename: "./week_1_lesson_1.html",
+        inject: true,
+        chunks: ['index']
+    }),
+    new HtmlWebPackPlugin({
+        template: "./src/client/views/week_1_lesson_2.html",
+        filename: "./week_1_lesson_2.html",
         inject: true,
         chunks: ['index']
     }),

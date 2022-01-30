@@ -41,20 +41,32 @@ plugins: [
         chunks: ['index']
     }),
     new HtmlWebPackPlugin({
-        template: "./src/client/views/mentorship_program.html",
-        filename: "./mentorship_program.html",
-        inject: true,
-        chunks: ['index']
-    }),
-    new HtmlWebPackPlugin({
         template: "./src/client/views/donate.html",
         filename: "./donate.html",
         inject: true,
         chunks: ['index']
     }),
     new HtmlWebPackPlugin({
+        template: "./src/client/views/mentorship_program.html",
+        filename: "./mentorship_program.html",
+        inject: true,
+        chunks: ['index']
+    }),
+    new HtmlWebPackPlugin({
         template: "./src/client/views/week_0.html",
         filename: "./week_0.html",
+        inject: true,
+        chunks:  ['index']
+    }),
+    new HtmlWebPackPlugin({
+        template: "./src/client/views/week_1.html",
+        filename: "./week_1.html",
+        inject: true,
+        chunks:  ['index']
+    }),
+    new HtmlWebPackPlugin({
+        template: "./src/client/views/week_2.html",
+        filename: "./week_2.html",
         inject: true,
         chunks:  ['index']
     }),
@@ -67,6 +79,18 @@ plugins: [
     new HtmlWebPackPlugin({
         template: "./src/client/views/week_3.html",
         filename: "./week_3.html",
+        inject: true,
+        chunks: ['index']
+    }),
+    new HtmlWebPackPlugin({
+        template: "./src/client/views/week_4.html",
+        filename: "./week_4.html",
+        inject: true,
+        chunks: ['index']
+    }),
+    new HtmlWebPackPlugin({
+        template: "./src/client/views/week_5.html",
+        filename: "./week_5.html",
         inject: true,
         chunks: ['index']
     }),
@@ -93,6 +117,12 @@ plugins: [
         filename: "./teach.html",
         inject: true,
         chunks: ['index', 'test']
+    }),
+    new HtmlWebPackPlugin({
+        template: "./src/client/views/notfound.html",
+        filename: "./notfound.html",
+        inject: true,
+        chunks: ['index']
     })
 ]
 }
