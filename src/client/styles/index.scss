@@ -43,7 +43,6 @@
 
 #instr {
     grid-area: instr;
-    overflow: scroll;
     p {
         font-size: small;
         font-family: 'Times New Roman', Times, serif;
@@ -59,7 +58,6 @@
 
 #teach {
     grid-area: teaching;
-    overflow: scroll;
     font-size: small;
     font-family: 'Times New Roman', Times, serif;
     p a {
