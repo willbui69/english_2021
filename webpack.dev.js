@@ -66,6 +66,12 @@ plugins: [
         chunks:  ['index']
     }),
     new HtmlWebPackPlugin({
+        template: "./src/client/views/week_0_recommended_reading.html",
+        filename: "./week_0_recommended_reading.html",
+        inject: true,
+        chunks:  ['index']
+    }),
+    new HtmlWebPackPlugin({
         template: "./src/client/views/week_1.html",
         filename: "./week_1.html",
         inject: true,
