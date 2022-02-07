@@ -132,6 +132,24 @@ plugins: [
         chunks: ['index']
     }),
     new HtmlWebPackPlugin({
+        template: "./src/client/views/week_0_lesson_3.html",
+        filename: "./week_0_lesson_3.html",
+        inject: true,
+        chunks: ['index']
+    }),
+    new HtmlWebPackPlugin({
+        template: "./src/client/views/week_0_lesson_4.html",
+        filename: "./week_0_lesson_4.html",
+        inject: true,
+        chunks: ['index']
+    }),
+    new HtmlWebPackPlugin({
+        template: "./src/client/views/week_0_lesson_5.html",
+        filename: "./week_0_lesson_5.html",
+        inject: true,
+        chunks: ['index']
+    }),
+    new HtmlWebPackPlugin({
         template: "./src/client/views/week_1_lesson_1.html",
         filename: "./week_1_lesson_1.html",
         inject: true,
