@@ -71,6 +71,12 @@ plugins: [
         chunks:  ['index']
     }),
     new HtmlWebPackPlugin({
+        template: "./src/client/views/week_0_problemsets.html",
+        filename: "./week_0_problemsets.html",
+        inject: true,
+        chunks:  ['index']
+    }),
+    new HtmlWebPackPlugin({
         template: "./src/client/views/week_1.html",
         filename: "./week_1.html",
         inject: true,
