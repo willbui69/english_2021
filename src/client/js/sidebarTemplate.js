@@ -109,6 +109,13 @@ async function addSidebarTemplate(){
                     </span>
                 </li>
                 <li>
+                    <span class="test">
+                        <a href="test.html">
+                            Admission Test
+                        </a>
+                    </span>
+                </li>
+                <li>
                 <span class="academic-integrity">
                     <a href="notfound.html">
                         Gradebook
