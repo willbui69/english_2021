@@ -1,13 +1,8 @@
-# problem and mission identifications
-
-The mission of this project is forming a learning platform where Vietnamese people can easily develop the cornerstone of English language.
-While there are multiple Vietnamese sources for english learners out there, it is hard to find one that reliable, systematical and importantly accessible freely. As a result, this public project is introduce to fill this gap.
-
 # For English experts
 
-This learning platform aims to provide the foundation for Vietnamese learners on their way of mastering English language. I believe that the knowledge base plays an important role for people who lost their track of learning English. I also hold a belief that the base knowlege is not the basic knowledge as many think, but the crucial part and maybe the hard bits for anyone to grab. Thus, we will design an English course so learners have a sense of confidence to move on forwards with other advanced courses after they mastering all topics provided by us.
+This learning platform aims to provide the foundation for Vietnamese learners on their way of mastering the English language. I believe that the knowledge base plays an important role for people who have lost their track of learning English. I also hold a belief that the base knowledge is not the basic knowledge as many think, but the crucial part and maybe the hard bits for anyone to grab. Thus, we will design an English course so learners have a sense of confidence to move on forwards with other advanced courses after they master all topics provided by us.
 
-The content of this course will be divided into weekly classes. Each week, we will teach different topics in order from easy to hard. Initialy, we have:
+The content of this course will be divided into weekly classes. Each week, we will teach different topics in order from easy to hard. Initially, we have:
 
  Week 0: Learn how to learn
  Week 1: English word classes
@@ -18,20 +13,23 @@ The content of this course will be divided into weekly classes. Each week, we wi
  Week 6: English in Real Life
  Week 7: English in Academic Environment
 
- It would be great to see the future changes in our course's syllabus from all of you. Besides that, we are struggling to seek for the best knowledge for each topic. Therefore, We are inviting you to:
+ It would be great to see upcoming changes in our course's syllabus from all of you. Besides that, we are struggling to seek the best knowledge for each topic. Therefore, We are inviting you to:
 
  - Evaluate the current knowledge that we have already built.
  - Sugguest any advice and idea that we can improve the course's structure.
- - Offer other teaching metarials so that we can perfect each week lesson.
+ - Offer other teaching metarials so that we can perfect each week's lesson.
 
 Any contribution(s) from you in this project will be acknowledged. Without your expertise, this project is not possible!
 
 # For  Web developers
 
-While the content is the heart of this project, the interface is regarded as the skeleton. It is important to make this project appealing in the front end and working seamlessly in the back end. Bear that in mind, we need your expertise to design a web app that is elegant as well as appealing.
+While the content is the heart of this project, the interface is regarded as the skeleton. It is important to make this project appealing in the front end and working seamlessly in the back end. Bearing that in mind, we need your expertise to design a web app that is elegant as well as attractive too.
 
-The innitial interface of the web app has been built. It works as the starting point so all of us can develop other features from there. This setup already have webpack and other npm packages, loaders and plugins installed.  
+The initial interface of the web app has been built. It works as the starting point so all of us can develop other features from there. This setup already has webpack and other npm packages, loaders and plugins installed.  
 Currently, we will focus on the front end first, but there will be more work to be done for the lesson, exercise, and grade systems. 
+
+Again, any contribution from you will be appreciated. 
+
 
 ## Get Up and Running
 
@@ -47,3 +45,4 @@ git clone -- git@github.com:[your-user-name]/webpack-express.git --
 - ```npm run build-prod``` for production mode
 - ```npm start``` to start the app
 - this app runs on localhost:8080, but you can of course edit that in index.js
+
